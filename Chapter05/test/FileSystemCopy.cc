@@ -5,7 +5,7 @@ namespace fs = std::filesystem;
 
 int main()
 {
-    auto workspace_path = fs::path{"C:\\Users\\Jan\\Dektop\\UdemyCppEng"};
+    auto workspace_path = fs::path{"/data4/Documents/development/cpp-2024/UdemyCppEng/Chapter05"};
     auto chapter_path = workspace_path;
     chapter_path /= "Chapter5";
     std::cout << chapter_path << '\n';

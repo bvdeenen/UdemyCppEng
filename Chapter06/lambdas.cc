@@ -67,11 +67,11 @@ int main()
 
     const auto N = 3;
     //                Cap. List, Param List, Function Body
-    auto filter = [N](const auto value) {return (value % N) == 0;};
+    auto filter = [](const auto value) {return (value % N) == 0;};
 
     for (const auto val : my_vector)
     {
-        std::cout << std::boolalpha << filter(val) << '\n';
+        std::cout << std::boolalpha << val << ":" << filter(val) << '\n';
     }
     std::cout << '\n';
 

@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <string>
+#include <cinttypes>
+#include <utility>
 
 // default
 // delete
@@ -13,16 +15,18 @@ class Agent
 public:
     Agent() = delete;
 
-    Agent(const std::string &name,
+    Agent(std::string name,
           const std::uint32_t id,
           const std::uint32_t hp = 0U,
           const std::uint32_t energy = 0U)
-        : m_name(name), m_id(id), m_hp(hp), m_energy(energy)
+        : m_name(std::move(name)), m_id(id), m_hp(hp), m_energy(energy)
     {
         std::cout << "Agent Constructor!" << '\n';
     }
 
-    virtual ~Agent() = default;
+    virtual ~Agent() {
+        std::cout << "Agent Destructor!" << '\n';
+    }
 
     virtual void print_agent_data() const
     {
@@ -48,7 +52,7 @@ public:
         std::cout << "Player Constructor!" << '\n';
     }
 
-    ~Player()
+    ~Player() override
     {
         std::cout << "Player Destructor!" << '\n';
     }
@@ -71,7 +75,7 @@ public:
         std::cout << "NPC Constructor!" << '\n';
     }
 
-    ~NPC()
+    ~NPC() override
     {
         std::cout << "NPC Destructor!" << '\n';
     }

@@ -1,3 +1,4 @@
+#include <format>
 #include <iostream>
 #include <memory>
 
@@ -11,17 +12,21 @@ public:
 
     ~ScopeTest()
     {
-        std::cout << "Destructor!\n";
+        std::cout << std::format("Destructor ! {}\n", m_val);
     }
 
     void test()
     {
-        std::cout << "Test!\n";
+        std::cout << std::format("Test ! {}\n", m_val);
     }
 
 private:
     int m_val;
 };
+
+void f3(std::unique_ptr<ScopeTest> t) {
+    t->test() ;
+}
 
 void f1()
 {
@@ -31,7 +36,7 @@ void f1()
 
 void f2()
 {
-    auto *t2 = new ScopeTest(10);
+    auto *t2 = new ScopeTest(20);
     t2->test();
     delete t2;
 }

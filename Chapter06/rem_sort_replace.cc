@@ -6,14 +6,14 @@
 
 namespace
 {
-constexpr auto NUM_ELEMENTS = size_t{3U};
+constexpr auto NUM_ELEMENTS = size_t{20U};
 };
 
 std::int32_t gen()
 {
     static auto seed = std::random_device{};
     static auto g = std::mt19937{seed()};
-    static auto d = std::uniform_int_distribution<std::int32_t>{-10, 10};
+    static auto d = std::uniform_int_distribution<std::int32_t>{-5, 5};
 
     return d(g);
 }
@@ -23,7 +23,7 @@ void print_vector(const std::vector<T> &vec)
 {
     for (const auto v : vec)
     {
-        std::cout << v << '\n';
+        std::cout << v << ", ";
     }
     std::cout << '\n';
 }
@@ -41,7 +41,7 @@ int main()
         my_vector.begin(),
         my_vector.end(),
         [](const auto val) { return val % 2 == 0; },
-        -1);
+        10000);
     print_vector(my_vector);
 
     std::sort(my_vector.begin(),

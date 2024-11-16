@@ -19,11 +19,18 @@ int main()
     // m2 = m3; // copy assignm operator
 
     // Move Example
-    auto vec = std::vector<Matrix<float>>{};
-
-    vec.push_back(Matrix<float>{-1.0, -2.0, -3.0, -4.0}); // creates rvalue obj
-
-    vec[0].print_matrix();
+    // auto vec = std::vector<Matrix<float>>{};
+    //
+    // vec.push_back(Matrix<float>{-1.0, -2.0, -3.0, -4.0}); // creates rvalue obj
+    //
+    // vec[0].print_matrix();
+    std::string s = "hallo";
+    std::string v = std::move(s);
+    std::cout << "s:"<< s << "\n";
+    std::cout << "v:"<< v << "\n";
+    // v.push_back('j');
+    // std::cout << "s:"<< s << "\n";
+    // std::cout << "v:"<< v << "\n";
 
     return 0;
 }

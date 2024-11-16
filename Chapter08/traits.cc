@@ -1,6 +1,8 @@
 #include <iostream>
 #include <type_traits>
 
+// PRE C++20
+
 template <typename T>
 struct is_numeric
     : public std::disjunction<std::is_integral<T>, std::is_floating_point<T>>
@@ -10,9 +12,10 @@ struct is_numeric
 template <typename T>
 auto max1(const T &a, const T &b)
 {
+    // called at COMPILE time.
     static_assert(
         std::disjunction_v<std::is_integral<T>, std::is_floating_point<T>>,
-        "failed...");
+        "not an integral or floating point");
 
     return (a < b) ? b : a;
 }

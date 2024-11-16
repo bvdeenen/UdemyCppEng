@@ -61,7 +61,7 @@ void print_vector(
 }
 
 template <typename T, typename U>
-void print_map(const std::map<T, U> Map)
+void print_map(const std::map<T, U> &Map)
 {
     for (const auto &[Key, value] : Map)
     {

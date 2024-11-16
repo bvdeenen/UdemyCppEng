@@ -10,9 +10,10 @@ public:
         : name(_name), damage(_damage), attack_speed(_attack_speed){};
     ~Axe() = default;
 
-    std::string get_name() const;
-    float get_damage() const;
-    float get_attack_speed() const;
+    [[nodiscard]] std::string get_name() const;
+    [[nodiscard]] float get_damage() const;
+    [[nodiscard]] float get_attack_speed() const;
+    void increment_damage(float f = 1.0);
 
 private:
     std::string name;

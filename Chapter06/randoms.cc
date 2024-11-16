@@ -12,7 +12,7 @@ int main()
 {
     auto my_vector = std::vector<std::int32_t>(NUM_ELEMENTS, 0U);
 
-    auto seed = std::random_device{};
+    std::random_device seed;
     auto gen = std::mt19937{seed()};
     auto dist = std::uniform_int_distribution<std::int32_t>{-10, 10};
 

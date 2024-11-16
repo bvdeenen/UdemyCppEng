@@ -1,10 +1,9 @@
 #include <array>
-#include <cstdint>
 #include <iostream>
 #include <string>
 
 // "Jan": String literal - known at compile time
-int main()
+static int main_()
 {
     char single_chatacter = 'a';
     char my_text1[] = "Jan"; // \0 - null terminating
@@ -13,8 +12,8 @@ int main()
 
     auto my_text4 = std::string{"Jan"};
     std::cout << my_text4.size() << "\n";
-    my_text4.append(" Schaffranek");
-    std::cout << my_text4.size() << "\n";
+    my_text4.append("€α");
+    std::cout << '"' << my_text4 << '"' << my_text4.size() << "\n";
 
     // Whats used in modern c++?
     // my_text1

@@ -13,6 +13,7 @@ T concat1(T first, Args... args)
     return first + concat1(args...);
 }
 
+// since C++17
 template <typename T, typename... Args>
 T concat2(Args... args)
 {
@@ -29,7 +30,7 @@ int main()
     // first=s1, ...args=[s2, s3]
     // first=s2, ...args=[s3]
     // first=s3, ...args=[]
-    // std::cout << concat1(s1, s2, s3) << std::endl;
+    std::cout << concat1(s1, s2, s3) << std::endl;
     // std::cout << concat1(2, 3, 4) << std::endl;
     std::cout << concat2<int>(2, 3, 4) << std::endl;
 

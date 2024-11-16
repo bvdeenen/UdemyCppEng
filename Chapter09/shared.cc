@@ -39,7 +39,7 @@ void f1()
         std::cout << "Count: " << t.use_count() << '\n';
     }
 
-    std::cout << "Count: " << t.use_count() << '\n';
+    std::cout << "Count (after scope close): " << t.use_count() << '\n';
 }
 
 void f2()

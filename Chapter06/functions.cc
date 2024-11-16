@@ -31,14 +31,16 @@ int main()
 
     const int threshold = 2;
     auto fns = std::vector<std::function<bool(const int)>>{
-        [&threshold](const int v) { return v > threshold; },
-        [&threshold](const int v) { return v < threshold; },
-        [&threshold](const int v) { return v == threshold; },
-        [&threshold](const int v) { return v != threshold; },
-        [&threshold](const int v) { return v >= threshold; },
-        [&threshold](const int v) { return v <= threshold; },
+        [](const int v) { return v > threshold; },
+        [](const int v) { return v < threshold; },
+        [](const int v) { return v == threshold; },
+        [](const int v) { return v != threshold; },
+        [](const int v) { return v >= threshold; },
+        [](const int v) { return v <= threshold; },
+        f
     };
 
+    // no worky
     // auto fns = std::vector<bool (*)(const int)>{
     //     [](const int v) { return v > 2; },
     //     [](const int v) { return v < 2; },

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/data4/Documents/development/cpp-2024/UdemyCppEng/Chapter06",
+  "command": "/usr/bin/c++   -g -std=gnu++23 -O0 -o CMakeFiles/Chapter06.dir/chronos.cc.o -c /data4/Documents/development/cpp-2024/UdemyCppEng/Chapter06/chronos.cc",
+  "file": "/data4/Documents/development/cpp-2024/UdemyCppEng/Chapter06/chronos.cc",
+  "output": "CMakeFiles/Chapter06.dir/chronos.cc.o"
+}
+]

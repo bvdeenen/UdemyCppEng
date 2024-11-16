@@ -8,7 +8,7 @@ std::optional<std::string> check(const bool flag)
 {
     if (flag)
         return "true"s;
-    return {}; // std::nullopt
+    return {}; //std::nullopt;
 }
 
 int main()

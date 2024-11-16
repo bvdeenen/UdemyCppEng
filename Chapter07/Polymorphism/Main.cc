@@ -18,8 +18,11 @@ int main()
     Player player1("P1", 1, 250, 55);
     NPC npc1("N1", 2, 235, 41);
 
-    const auto agents = std::vector<Agent *>{&agent1, &player1, &npc1};
-    printAllAgents(agents);
+    Agent a2 = npc1;
+    a2.print_agent_data();
+    const auto agents = std::vector<Agent *>{&agent1, &player1, &npc1, &a2};
+    // std::cout << "--------" << std::endl;
+    // printAllAgents(agents);
 
     return 0;
 }

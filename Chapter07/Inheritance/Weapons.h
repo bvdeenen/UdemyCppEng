@@ -1,10 +1,12 @@
 #include <string>
+#include <utility>
 
 class AttackInterface
 {
 public:
     AttackInterface() = default;
-    ~AttackInterface() = default;
+
+    virtual ~AttackInterface() = default;
 
     virtual void attack() const = 0;
 };
@@ -12,20 +14,20 @@ public:
 class Weapon : public AttackInterface
 {
 public:
-    Weapon(const std::string &_name,
+    Weapon(std::string _name,
            const float _damage,
            const float _attack_speed,
            const bool _single_handed,
            const bool _dual_handed)
-        : name(_name), damage(_damage), attack_speed(_attack_speed),
+        : name(std::move(_name)), damage(_damage), attack_speed(_attack_speed),
           single_handed(_single_handed), dual_handed(_dual_handed){};
-    virtual ~Weapon() = default;
+    ~Weapon() override = default;
 
-    std::string get_name() const;
-    float get_damage() const;
-    float get_attack_speed() const;
-    bool get_single_handed() const;
-    bool get_dual_handed() const;
+    [[nodiscard]] std::string get_name() const;
+    [[nodiscard]] float get_damage() const;
+    [[nodiscard]] float get_attack_speed() const;
+    [[nodiscard]] bool get_single_handed() const;
+    [[nodiscard]] bool get_dual_handed() const;
 
 protected:
     std::string name;
@@ -42,7 +44,7 @@ public:
         const float _damage,
         const float _attack_speed)
         : Weapon(_name, _damage, _attack_speed, true, false){};
-    virtual ~Axe() = default;
+    ~Axe() override = default;
 
     void attack() const final;
 };
@@ -54,7 +56,7 @@ public:
             const float _damage,
             const float _attack_speed)
         : Weapon(_name, _damage, _attack_speed, false, true){};
-    virtual ~Longbow() = default;
+    ~Longbow() override = default;
 
     void attack() const final;
 };

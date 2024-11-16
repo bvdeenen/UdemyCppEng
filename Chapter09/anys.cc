@@ -23,6 +23,7 @@ int main()
     value = "42"s; // std::string "42"
     std::cout << sizeof(value) << '\n';
 
+
     try
     {
         auto d = std::any_cast<std::string>(value);

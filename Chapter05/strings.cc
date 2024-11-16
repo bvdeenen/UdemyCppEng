@@ -27,13 +27,13 @@ int main()
     const auto idx2 = text.rfind(search_str2);
     print_found_idx(idx2, "rfind");
 
-    auto s1 = std::string{"Jann"};
+    auto s1 = std::string{"JaΑΒαβnn"};
     auto s2 = std::string{"Jan"};
     std::cout << "s1 == s2: " << std::boolalpha << (s1 == s2) << '\n';
     const auto comapared = s1.compare(s2);
     std::cout << "s1.comapre(s2): " << comapared << '\n';
 
-    const auto search_str = "nn";
+    const auto search_str = "Βα";
     const auto idx = s1.find(search_str);
     if (idx != std::string::npos)
         s1.replace(idx, 2, "n");

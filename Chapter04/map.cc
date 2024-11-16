@@ -19,6 +19,7 @@ int main()
     // if key does not exist, it will be added
     my_map["Sam"] = 40;
     my_map["Veronika"] = 24;
+    my_map[""] = -256;
 
     print_map(my_map);
 
@@ -38,10 +39,11 @@ int main()
 
     print_map(my_map);
 
-    const auto it_find = my_map.find("Lisa");
+    const auto it_find = my_map.find("");
     if (it_find != my_map.end())
     {
-        std::cout << (*it_find).first << '\n';
+        auto &[k, v] = *it_find;
+        std::cout <<  k << " is " << v << " years old\n";
     }
 
     return 0;

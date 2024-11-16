@@ -28,7 +28,7 @@ int main()
     std::uint32_t my_array[len] = {1, 2, 3, 4, 5}; // c-style
     print_array_values1(my_array, len);
 
-    auto my_array2 = std::array<std::uint32_t, len>{6, 7, 8, 9, 10};
+    const std::array<std::uint32_t, len> my_array2{6, 7, 8, 9, 10};
     print_array_values2(my_array2);
 
     return 0;

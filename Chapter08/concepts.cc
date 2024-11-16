@@ -1,6 +1,7 @@
-#include <concepts>
 #include <iostream>
 #include <string>
+
+// C++20!
 
 template <typename T>
 concept Addable = requires(T x)
@@ -26,7 +27,6 @@ int main()
     const auto s2 = std::string{"lo"};
 
     std::cout << concat(s1, s2) << std::endl;
-    // std::cout << concat(1, 2) << std::endl;
 
     return 0;
 }

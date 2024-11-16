@@ -21,9 +21,10 @@
 //     }
 // }
 
-void print_span(std::span<std::int32_t> span)
+template<typename T>
+void print_span(std::span<T> span)
 {
-    for (const auto value : span)
+    for (const T value : span)
     {
         std::cout << value << '\n';
     }
@@ -36,10 +37,10 @@ void print_span(std::span<std::int32_t> span)
 int main()
 {
     auto vec = std::vector<std::int32_t>{1, 2, 3};
-    print_span(vec);
+    print_span<int32_t>(vec);
 
-    auto arr = std::array<std::int32_t, 3>{1, 2, 3};
-    print_span(arr);
+    std::array<long long, 3> arr = std::array{1LL, 2LL, 3LL};
+    print_span<long long>(arr);
 
     return 0;
 }

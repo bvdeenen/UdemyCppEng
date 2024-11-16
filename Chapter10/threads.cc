@@ -17,7 +17,7 @@ void worker(const std::int32_t input, std::int32_t &output)
 
     output = input * 2;
 
-    std::this_thread::sleep_for(std::chrono::seconds(20));
+    std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
 int main()

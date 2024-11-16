@@ -1,0 +1,45 @@
+
+sudo xbps-remove kauth-devel knotifications-devel qt5-devel attica-devel karchive-devel kcodecs-devel kconfig-devel kconfigwidgets-devel kcoreaddons-devel kdbusaddons-devel ki18n-devel kitemviews-devel kwidgetsaddons-devel kguiaddons-devel \
+phonon-qt5-devel-4.12.0_2 \
+polkit-qt5-devel-0.200.0_1 \
+poppler-qt5-devel-24.08.0_1 \
+qt5-declarative-devel-5.15.11+20231124_5 \
+qt5-location-devel-5.15.11+20231124_5 \
+qt5-script-devel-5.15.11+20231124_5 \
+qt5-speech-devel-5.15.11_1 \
+qt5-svg-devel-5.15.11+20231124_5 \
+qt5-tools-devel-5.15.11+20231124_5 \
+qt5-webchannel-devel-5.15.11+20231124_5 \
+qt5-webengine-devel-5.15.16_2 \
+qt5-webview-devel-5.15.11_1 \
+qt5-x11extras-devel-5.15.11+20231124_5 \
+qt5-xmlpatterns-devel-5.15.11+20231124_5 \
+sonnet-devel-5.116.0_1 \
+threadweaver-devel-5.116.0_1 \
+kxmlgui-devel-5.116.0_1 \
+kdoctools-devel-5.116.0_1 \
+kfilemetadata5-devel-5.116.0_1 \
+kiconthemes-devel-5.116.0_1 \
+kcompletion-devel-5.116.0_1 \
+kservice-devel-5.116.0_1 \
+kiconthemes-devel-5.116.0_1 \
+kcrash-devel-5.116.0_1 \
+kfilemetadata5-devel-5.116.0_1 \
+kservice-devel-5.116.0_1 \
+kdoctools-devel-5.116.0_1 \
+kfilemetadata5-devel-5.116.0_1 \
+kservice-devel-5.116.0_1 \
+kiconthemes-devel-5.116.0_1 \
+kcompletion-devel-5.116.0_1 \
+ksolid-devel-5.116.0_1 \
+qt5-charts-devel-5.15.11+20231124_5 \
+ktextwidgets-devel-5.116.0_1 \
+ksolid-devel-5.116.0_1 \
+kwindowsystem-devel-5.116.0_1 \
+kwindowsystem-devel-5.116.0_1 \
+ktextwidgets-devel-5.116.0_1 \
+ktextwidgets-devel-5.116.0_1 \
+ktextwidgets-devel-5.116.0_1 \
+kglobalaccel-devel-5.116.0_1 \
+ktextwidgets-devel-5.116.0_1 \
+kglobalaccel-devel-5.116.0_1
